@@ -8,7 +8,7 @@ public class LeftMovement : MonoBehaviour
     public float speed;
     BoxCollider2D box;
     float groundWidth;
-    float ObstacleWidth;
+    float obstacleWidth;
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class LeftMovement : MonoBehaviour
 
         else if (gameObject.CompareTag("Obstacle"))
         {
-            ObstacleWidth = GameObject.FindGameObjectWithTag("Column").GetComponent<BoxCollider2D>().size.x;
+            obstacleWidth = GameObject.FindGameObjectWithTag("Column").GetComponent<BoxCollider2D>().size.x;
         }
 
     }
@@ -40,7 +40,7 @@ public class LeftMovement : MonoBehaviour
          
         else if (gameObject.CompareTag("Obstacle"))
         {
-            if (true)
+            if (transform.position.x < GameManager.bottomLeft.x - obstacleWidth)
             {
                 Destroy(gameObject);
             }
