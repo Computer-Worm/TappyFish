@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0633f1dd1f233e4fab9f3be8cf00c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 13
+  speed: 12
   score: {fileID: 1365565255}
   gameManager: {fileID: 1381451786}
   fishDied: {fileID: 459629134, guid: 8ed56e610910e974fb5bcd16a19fb5ad, type: 3}
