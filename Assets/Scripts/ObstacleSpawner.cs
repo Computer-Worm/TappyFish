@@ -10,23 +10,17 @@ public class ObstacleSpawner : MonoBehaviour
     public float maxY;
     public float minY;
     float randomY;
-    
-    public void InstantiateObstacle()
-    {
-        GameObject newObstacle = Instantiate(obstacle);
-        newObstacle.transform.position = new Vector2(transform.position.x, randomY);
-    }
 
     // Start is called before the first frame update
     void Start()
     {
-        InstantiateObstacle();
+        //InstantiateObstacle();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.gameOver == false)
+        if (GameManager.gameOver == false && GameManager.gameStarted == true)
         {
             timer += Time.deltaTime;
 
@@ -38,5 +32,11 @@ public class ObstacleSpawner : MonoBehaviour
             }
         }
 
+    }
+
+    public void InstantiateObstacle()
+    {
+        GameObject newObstacle = Instantiate(obstacle);
+        newObstacle.transform.position = new Vector2(transform.position.x, randomY);
     }
 }
