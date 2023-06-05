@@ -8,13 +8,11 @@ public class Medal : MonoBehaviour
     public Sprite medal, bronzMedal, silverMedal, goldMedal;
     Image img;
 
-    // Start is called before the first frame update
     void Start()
     {
         img = GetComponent<Image>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         int gameScore = GameManager.gameScore;

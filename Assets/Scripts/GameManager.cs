@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
         bottomLeft = Camera.main.ScreenToWorldPoint(new Vector2(0, 0));
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         gameOver = false;
@@ -45,7 +44,6 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    // Update is called once per frame
     void Update()
     {
         

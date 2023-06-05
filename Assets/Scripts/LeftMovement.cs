@@ -24,7 +24,6 @@ public class LeftMovement : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (GameManager.gameOver == false)
